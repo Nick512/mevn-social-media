@@ -6,7 +6,7 @@ const User = require("../models/user")
 
 //Route to create a new user
 router.post("/", (req, res) => {
-	const { name, password } = req.body
+	const { name, password, userID } = req.body
 
 	//Validation
 
@@ -14,6 +14,7 @@ router.post("/", (req, res) => {
 		if (user) return res.status(400).json({ msg: "User already exists" })
 
 		const newUser = new User({
+			userID,
 			name,
 			password,
 		})

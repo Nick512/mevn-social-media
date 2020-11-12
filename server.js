@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 const config = require("config")
 
 const user = require("./routes/users")
+const post = require("./routes/post")
 
 const app = express()
 
@@ -25,6 +26,8 @@ mongoose
 
 //User routes
 app.use("/api/user", user)
+
+app.use("/api/post", post)
 
 app.get("*", (req, res) => {
 	res.send("hello")

@@ -1,3 +1,3 @@
 {
-	"mongoURI": ""
+	"mongoURI": "mongodb+srv://Nick:mongoDB12@cluster0.7ymnk.mongodb.net/Vue?retryWrites=true&w=majority"
 }
