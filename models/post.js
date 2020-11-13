@@ -18,13 +18,18 @@ const PostSchema = new Schema({
 	},
 
 	likes: {
-		type: Number,
-		default: 0,
+		type: Array,
+		default: [],
 	},
 
 	createdAt: {
 		type: Date,
 		default: Date.now,
+	},
+
+	createdBy: {
+		type: String,
+		required: true,
 	},
 })
 
