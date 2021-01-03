@@ -4,7 +4,7 @@ const Post = require("../models/post")
 const express = require("express")
 const router = express.Router()
 
-//Route to create a new post
+//Route to like a post
 router.post("/", (req, res) => {
 	const { postID, userID, createdBy } = req.body
 
