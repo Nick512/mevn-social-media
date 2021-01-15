@@ -6,7 +6,6 @@ const bcrypt = require("bcrypt")
 
 //Import the User model
 const User = require("../models/user")
-const { bulkWrite } = require("../models/user")
 
 //Route to create a new user
 router.post("/", (req, res) => {
