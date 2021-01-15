@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-success">
 		<div class="container-fluid">
 			<router-link :to="{ name: 'index' }"
 				><a class="navbar-brand" href=""
@@ -46,4 +46,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+nav {
+	padding: 12px;
+}
+</style>

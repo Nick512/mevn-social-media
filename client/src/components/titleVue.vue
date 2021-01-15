@@ -2,13 +2,13 @@
 	<div class="title">
 		<h1>Vue Social Media</h1>
 		<router-link :to="{ name: 'login' }">
-			<button type="button" class="btn btn-outline-success col-md-3">
+			<button type="button" class="btn btn-success col-md-3">
 				Log In
 			</button>
 		</router-link>
 
 		<router-link :to="{ name: 'register' }">
-			<button type="button" class="btn btn-outline-success col-md-3">
+			<button type="button" class="btn btn-success col-md-3">
 				Make an Account
 			</button>
 		</router-link>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-	name: "title",
+	name: "titleVue",
 	components: {},
 }
 </script>
@@ -38,5 +38,13 @@ button {
 	display: block;
 	margin: auto;
 	margin-top: 10px;
+	transition: transform 0.15s ease-in;
+}
+a {
+	text-decoration: none;
+}
+button:hover {
+	transform: scale(0.99);
+	transition: transform 1 ease-in;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid" id="cont">
+	<div class="" id="cont">
 		<div class="row">
 			<navbar />
 		</div>

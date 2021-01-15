@@ -4,6 +4,7 @@ import Router from "vue-router"
 Vue.use(Router)
 
 export default new Router({
+	mode: "history",
 	routes: [
 		{
 			path: "/register",
@@ -24,6 +25,12 @@ export default new Router({
 			name: "index",
 			component: () =>
 				import(/* webpackChunkName: "index" */ "./views/index.vue"),
+		},
+		{
+			path: "/profile",
+			name: "profile",
+			component: () =>
+				import(/* webpackChunkName: "index" */ "./views/profile.vue"),
 		},
 	],
 })

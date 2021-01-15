@@ -1,12 +1,14 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const config = require("config")
+const cors = require("cors")
 
 const user = require("./routes/users")
 const post = require("./routes/post")
 const likePost = require("./routes/likePost")
 
 const app = express()
+app.use(cors())
 
 //Body Parser middleware
 app.use(express.json())
@@ -31,10 +33,6 @@ app.use("/api/user", user)
 app.use("/api/post", post)
 
 app.use("/api/likepost", likePost)
-
-app.get("*", (req, res) => {
-	res.send("hello")
-})
 
 const port = 5000
 
