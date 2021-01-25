@@ -1,0 +1,25 @@
+{
+	"name": "vuesm",
+	"version": "1.0.0",
+	"description": "mevn stack ",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon server.js",
+		"client": "npm run serve --prefix client",
+		"dev2": "concurrently \"npm run dev\" \"npm run client\""
+	},
+	"author": "Nick",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.0.0",
+		"concurrently": "^5.3.0",
+		"config": "^3.3.2",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongoose": "^5.10.11",
+		"nodemon": "^2.0.6",
+		"passport-local": "^1.0.0",
+		"uuid": "^8.3.2"
+	}
+}
