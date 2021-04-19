@@ -9,28 +9,33 @@ const Post = require("../models/post")
 
 //Route to create a new post
 router.post("/", (req, res) => {
-	const { title, body, createdBy } = req.body
+    const { title, body, createdBy } = req.body
 
-	//Create post ID
-	const postID = uuidv4()
+    //Create post ID
+    const postID = uuidv4()
 
-	const newPost = new Post({
-		postID,
-		title,
-		body,
-		likes: [],
-		createdAt: Date.now(),
-		createdBy,
-	})
+    const newPost = new Post({
+        postID,
+        title,
+        body,
+        likes: [],
+        createdAt: Date.now(),
+        createdBy,
+    })
 
-	newPost.save()
+    newPost.save()
+    console.log(newPost)
 
-	res.json({ msg: "post created" })
+    res.json({ msg: "post created" })
 
-	User.findOne({ userID: createdBy }).then((user) => {
-		user.posts.push(postID)
-		user.save()
-	})
+    User.findOne({ userID: createdBy }).then((user) => {
+        try {
+            user.posts.push(postID)
+            user.save()
+        } catch (error) {
+            console.log(error)
+        }
+    })
 })
 
 module.exports = router
